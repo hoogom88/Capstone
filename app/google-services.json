@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "274769679338",
+    "project_id": "log-catcher",
+    "storage_bucket": "log-catcher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274769679338:android:3cb24ee5801b18c18c9893",
+        "android_client_info": {
+          "package_name": "com.android04.capstonedesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274769679338-3f042bi7d0iht5ljsdcakiuhqgk7tf01.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android04.capstonedesign",
+            "certificate_hash": "d6f8790d5b2192a5390ce84d2af548169cdec03d"
+          }
+        },
+        {
+          "client_id": "274769679338-7l34c1cbk5tl5p2v0g3c29hjcr84k5sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIquX8LZ-7mEeEtJbfxzyN9yKOxWO-uf0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274769679338-7l34c1cbk5tl5p2v0g3c29hjcr84k5sb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

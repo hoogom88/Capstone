@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.android04.capstonedesign.data.dto.ProductDTO" />
+        <variable
+            name="viewModel"
+            type="com.android04.capstonedesign.ui.product.ProductPageViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            tools:context=".view.DetailPageActivity">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_image"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/gray_bg"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@{data.productName}"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vp_image"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="위치 정보 어쩌구" />
+
+            <TextView
+                android:id="@+id/tv_short_description"
+                setDescription="@{data}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_frequency"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/tv_frequency_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_frequency_title"
+                tools:text="간단 설명 어쩌구" />
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_reward_title"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:text="subscription"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="14sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="@+id/line_view"
+                app:layout_constraintTop_toBottomOf="@id/line_view" />
+
+            <TextView
+                android:id="@+id/tv_reward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:text="@{Integer.toString(data.reward).concat(@string/product_reward_str)}"
+                app:layout_constraintEnd_toEndOf="@id/line_view"
+                app:layout_constraintStart_toEndOf="@+id/tv_reward_title"
+                app:layout_constraintTop_toTopOf="@id/tv_reward_title" />
+
+            <TextView
+                android:id="@+id/tv_collect_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="query field"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_collect"
+                app:layout_constraintStart_toStartOf="@id/tv_reward_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_collect" />
+
+            <TextView
+                android:id="@+id/tv_collect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                app:autoSizeMaxTextSize="14sp"
+                app:autoSizeMinTextSize="8sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="@id/tv_reward"
+                app:layout_constraintStart_toStartOf="@id/tv_reward"
+                app:layout_constraintTop_toBottomOf="@+id/tv_reward" />
+
+            <TextView
+                android:id="@+id/tv_battery_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="insight type"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/tv_collect_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_collect" />
+
+            <TextView
+                android:id="@+id/tv_battery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_battery_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_collect"
+                app:layout_constraintStart_toStartOf="@+id/tv_collect"
+                app:layout_constraintTop_toTopOf="@id/tv_battery_title" />
+
+            <View
+                android:id="@+id/line_view2"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/line_view"
+                app:layout_constraintStart_toStartOf="@+id/line_view"
+                app:layout_constraintTop_toBottomOf="@+id/tv_short_description" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_sub"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_btn_sub"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_log"
+                tools:text="구독 취소" />
+
+            <TextView
+                android:id="@+id/tv_frequency_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="update frequency"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/tv_battery_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_battery_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_battery_title" />
+
+            <TextView
+                android:id="@+id/tv_frequency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_frequency_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_battery"
+                app:layout_constraintStart_toStartOf="@+id/tv_collect"
+                app:layout_constraintTop_toTopOf="@+id/tv_frequency_title" />
+
+            <TextView
+                android:id="@+id/textView7"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="subscribed date"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_frequency_title"
+                app:layout_constraintTop_toBottomOf="@+id/line_view2" />
+
+            <TextView
+                android:id="@+id/tv_sub_date"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_short_description"
+                app:layout_constraintStart_toEndOf="@+id/tv_point_title"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/tv_point_title"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="total used point"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/tv_sub_date"
+                app:layout_constraintStart_toEndOf="@+id/tv_point_title"
+                app:layout_constraintTop_toTopOf="@+id/tv_point_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_log"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@+id/tv_point"
+                app:layout_constraintStart_toStartOf="@+id/tv_point_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_log_title"
+                tools:listitem="@layout/item_product_log" />
+
+            <TextView
+                android:id="@+id/tv_log_title"
+                setVisibility="@{viewModel.isDetailProductSub()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="subscription info"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_point_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_point_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
+
+

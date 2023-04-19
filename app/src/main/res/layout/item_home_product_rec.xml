@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.android04.capstonedesign.data.dto.ProductDTO"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_bg">
+
+        <TextView
+            android:id="@+id/tv_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@{data.productName}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="앱 이용정보 제공" />
+
+        <TextView
+            android:id="@+id/tv_product_detail"
+            setDescription="@{data}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_info_title"
+            tools:text="실행하였던 앱 이름, 시간 등을 수집" />
+
+        <TextView
+            android:id="@+id/tv_sub_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{Integer.toString(data.reward).concat(@string/product_reward_str)}"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sub_info_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_sub_info_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_sub_info_title"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="2022.03.20" />
+
+        <TextView
+            android:id="@+id/tv_sub_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="reward"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="none"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_title" />
+
+        <View
+            android:id="@+id/v_indicator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/gray_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_detail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.android04.capstonedesign.data.dto.SearchCategorySetting" />
+        <variable
+            name="startNum"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_check"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:checked="@{item.checked}"
+            android:hint="선택지"
+            android:paddingStart="@dimen/layout_padding"
+            android:paddingEnd="@dimen/layout_padding"
+            android:text="@{item.name}"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/iv_open"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_open"
+            setSubOpener="@{item}"
+            android:layout_width="@dimen/item_text"
+            android:layout_height="@dimen/item_text"
+            android:elevation="3dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cb_check"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <LinearLayout
+            android:id="@+id/cl_subCb"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/iv_open"
+            app:layout_constraintTop_toBottomOf="@+id/cb_check">
+
+            <CheckBox
+                android:id="@+id/cb_check0"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'0'}"
+                setSubCheck="@{item}"
+                setNumber="@{'0'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check1"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'1'}"
+                setSubCheck="@{item}"
+                setNumber="@{'1'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'2'}"
+                setSubCheck="@{item}"
+                setNumber="@{'2'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check3"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'3'}"
+                setSubCheck="@{item}"
+                setNumber="@{'3'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check4"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'4'}"
+                setSubCheck="@{item}"
+                setNumber="@{'4'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check5"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'5'}"
+                setSubCheck="@{item}"
+                setNumber="@{'5'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check6"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'6'}"
+                setSubCheck="@{item}"
+                setNumber="@{'6'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check7"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'7'}"
+                setSubCheck="@{item}"
+                setNumber="@{'7'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check8"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'8'}"
+                setSubCheck="@{item}"
+                setNumber="@{'8'}"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:id="@+id/cb_check9"
+                setNumber="@{'9'}"
+                setSubCheck="@{item}"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:elevation="5dp"
+                android:hint="선택지"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@{startNum+'9'}"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_indicator"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="2dp"
+            android:background="@color/gray_light"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_subCb" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

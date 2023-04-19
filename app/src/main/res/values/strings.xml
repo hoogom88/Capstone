@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LogCatcher</string>
+    <string name="title_home">Home</string>
+    <string name="title_log">Log</string>
+    <string name="title_insight">Insight</string>
+    <string name="title_product">Product</string>
+    <string name="title_point">Point</string>
+    <string name="title_setting">Setting</string>
+    <string name="more">more</string>
+
+    <string name="log_title">Log Info</string>
+
+    <string name="product_tab_my">My product</string>
+    <string name="product_tab_recommend">Reco product</string>
+    <string name="product_reward_str">P / mth</string>
+</resources>

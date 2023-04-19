@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="TabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/main_dark</item>
+        <item name="colorSurface">@color/white_bg</item>
+        <item name="colorOnSurface">@color/gray_light</item>
+    </style>
+
+    <style name="customTextViewFontStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="fontFamily">@font/notosans_font_family</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CustomAlertDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorBackground">?attr/colorBackgroundFloating</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CreateProfileTheme" parent="Theme.AppCompat.Light">
+        <!-- 상단 Title 배경색 -->
+        <item name="colorAccent">#F15967</item>
+
+        <!-- 선택한 날짜 배경 색 -->
+        <item name="colorControlActivated">#F15967</item>
+
+        <!-- Highlight item color-->
+        <item name="colorControlHighlight">@color/icon_yellow</item>
+
+        <!--        &lt;!&ndash; Week TextColor&ndash;&gt;-->
+        <!--        <item name="android:textColorSecondary">@color/calendar_day_normal_font</item>-->
+
+        <!--        &lt;!&ndash; Calender Number color arrow color (< >) &ndash;&gt;-->
+        <!--        <item name="android:textColorPrimary">@color/calendar_day_normal_font</item>-->
+
+        <!--        &lt;!&ndash;day , month TextColor&ndash;&gt;-->
+        <!--        <item name="android:textColorPrimaryInverse">@color/calendar_month_font</item>-->
+
+        <!--        &lt;!&ndash; year&ndash;&gt;-->
+        <!--        <item name="android:textColorSecondaryInverse">@color/calendar_month_font</item>-->
+
+        <!-- 취소/확인버튼 색상 -->
+        <item name="android:textColor">@color/gray_dark</item>
+
+        <item name="windowActionBar">false</item>
+
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+
+</resources>

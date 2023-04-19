@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ViewModel"
+            type="com.android04.capstonedesign.ui.product.ProductPageViewModel"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_item_product"
+        android:elevation="3dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="앱 이용정보 제공" />
+
+        <TextView
+            android:id="@+id/tv_product_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_title"
+            tools:text="가입 날짜" />
+
+        <TextView
+            android:id="@+id/tv_product_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_hashtag"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hashtag"
+            tools:text="실행하였던 앱 이름, 시간 등을 수집..." />
+
+        <TextView
+            android:id="@+id/tv_product_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_product_info_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_product_info_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_product_info_title"
+            tools:text="2022.03.20" />
+
+        <TextView
+            android:id="@+id/tv_hasttag_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="collected info"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_product_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_info_title" />
+
+        <TextView
+            android:id="@+id/tv_hashtag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="TextView"
+            app:autoSizeMaxTextSize="14sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_hasttag_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_hasttag_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
